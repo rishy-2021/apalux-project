@@ -1,0 +1,1964 @@
+@font-face {
+  font-family: 'shop';
+  src:
+    url('fonts/shop.ttf?34kdub') format('truetype'),
+    url('fonts/shop.woff?34kdub') format('woff'),
+    url('fonts/shop.svg?34kdub#shop') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'shop' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-AbandonedCartMajor:before {
+  content: "\e900";
+}
+
+.icon-AccessibilityMajor:before {
+  content: "\e901";
+}
+
+.icon-ActivitiesMajor:before {
+  content: "\e902";
+}
+
+.icon-AddCodeMajor:before {
+  content: "\e903";
+}
+
+.icon-AddImageMajor:before {
+  content: "\e904";
+}
+
+.icon-AddMajor:before {
+  content: "\e905";
+}
+
+.icon-AddNoteMajor:before {
+  content: "\e906";
+}
+
+.icon-AddProductMajor:before {
+  content: "\e907";
+}
+
+.icon-AdjustMinor:before {
+  content: "\e908";
+}
+
+.icon-AffiliateMajor:before {
+  content: "\e909";
+}
+
+.icon-AlertMinor:before {
+  content: "\e90a";
+}
+
+.icon-AnalyticsMajor:before {
+  content: "\e90b";
+}
+
+.icon-AnalyticsMinor:before {
+  content: "\e90c";
+}
+
+.icon-AnyClickModelMinor:before {
+  content: "\e90d";
+}
+
+.icon-AppExtensionMinor:before {
+  content: "\e90e";
+}
+
+.icon-AppsMajor:before {
+  content: "\e90f";
+}
+
+.icon-AppsMinor:before {
+  content: "\e910";
+}
+
+.icon-ArchiveMajor:before {
+  content: "\e911";
+}
+
+.icon-ArchiveMinor:before {
+  content: "\e912";
+}
+
+.icon-ArrowDownMinor:before {
+  content: "\e913";
+}
+
+.icon-ArrowLeftMinor:before {
+  content: "\e914";
+}
+
+.icon-ArrowRightMinor:before {
+  content: "\e915";
+}
+
+.icon-ArrowUpMinor:before {
+  content: "\e916";
+}
+
+.icon-AttachmentMajor:before {
+  content: "\e917";
+}
+
+.icon-AutomationMajor:before {
+  content: "\e918";
+}
+
+.icon-BackspaceMajor:before {
+  content: "\e919";
+}
+
+.icon-BalanceMajor:before {
+  content: "\e91a";
+}
+
+.icon-BankMajor:before {
+  content: "\e91b";
+}
+
+.icon-BarcodeMajor:before {
+  content: "\e91c";
+}
+
+.icon-BehaviorMajor:before {
+  content: "\e91d";
+}
+
+.icon-BehaviorMinor:before {
+  content: "\e91e";
+}
+
+.icon-BillingStatementDollarMajor:before {
+  content: "\e91f";
+}
+
+.icon-BillingStatementEuroMajor:before {
+  content: "\e920";
+}
+
+.icon-BillingStatementPoundMajor:before {
+  content: "\e921";
+}
+
+.icon-BillingStatementRupeeMajor:before {
+  content: "\e922";
+}
+
+.icon-BillingStatementYenMajor:before {
+  content: "\e923";
+}
+
+.icon-BlockMinor:before {
+  content: "\e924";
+}
+
+.icon-BlockquoteMajor:before {
+  content: "\e925";
+}
+
+.icon-BlogMajor:before {
+  content: "\e926";
+}
+
+.icon-BugMajor:before {
+  content: "\e927";
+}
+
+.icon-ButtonCornerPillMajor:before {
+  content: "\e928";
+}
+
+.icon-ButtonCornerRoundedMajor:before {
+  content: "\e929";
+}
+
+.icon-ButtonCornerSquareMajor:before {
+  content: "\e92a";
+}
+
+.icon-ButtonMinor:before {
+  content: "\e92b";
+}
+
+.icon-BuyButtonButtonLayoutMajor:before {
+  content: "\e92c";
+}
+
+.icon-BuyButtonHorizontalLayoutMajor:before {
+  content: "\e92d";
+}
+
+.icon-BuyButtonMajor:before {
+  content: "\e92e";
+}
+
+.icon-BuyButtonVerticalLayoutMajor:before {
+  content: "\e92f";
+}
+
+.icon-CalendarMajor:before {
+  content: "\e930";
+}
+
+.icon-CalendarMinor:before {
+  content: "\e931";
+}
+
+.icon-CalendarTickMajor:before {
+  content: "\e932";
+}
+
+.icon-CalendarTimeMinor:before {
+  content: "\e933";
+}
+
+.icon-CameraMajor:before {
+  content: "\e934";
+}
+
+.icon-CancelMajor:before {
+  content: "\e935";
+}
+
+.icon-CancelMinor:before {
+  content: "\e936";
+}
+
+.icon-CancelSmallMinor:before {
+  content: "\e937";
+}
+
+.icon-CapitalMajor:before {
+  content: "\e938";
+}
+
+.icon-CapturePaymentMinor:before {
+  content: "\e939";
+}
+
+.icon-CardReaderChipMajor:before {
+  content: "\e93a";
+}
+
+.icon-CardReaderMajor:before {
+  content: "\e93b";
+}
+
+.icon-CardReaderTapMajor:before {
+  content: "\e93c";
+}
+
+.icon-CaretDownMinor:before {
+  content: "\e93d";
+}
+
+.icon-CaretUpMinor:before {
+  content: "\e93e";
+}
+
+.icon-CartDownMajor:before {
+  content: "\e93f";
+}
+
+.icon-CartMajor:before {
+  content: "\e940";
+}
+
+.icon-CartUpMajor:before {
+  content: "\e941";
+}
+
+.icon-CashDollarMajor:before {
+  content: "\e942";
+}
+
+.icon-CashDollarMinor:before {
+  content: "\e943";
+}
+
+.icon-CashEuroMajor:before {
+  content: "\e944";
+}
+
+.icon-CashPoundMajor:before {
+  content: "\e945";
+}
+
+.icon-CashRupeeMajor:before {
+  content: "\e946";
+}
+
+.icon-CashYenMajor:before {
+  content: "\e947";
+}
+
+.icon-CategoriesMajor:before {
+  content: "\e948";
+}
+
+.icon-ChannelsMajor:before {
+  content: "\e949";
+}
+
+.icon-ChatMajor:before {
+  content: "\e94a";
+}
+
+.icon-ChecklistAlternateMajor:before {
+  content: "\e94b";
+}
+
+.icon-ChecklistMajor:before {
+  content: "\e94c";
+}
+
+.icon-CheckoutMajor:before {
+  content: "\e94d";
+}
+
+.icon-ChevronDownMinor:before {
+  content: "\e94e";
+}
+
+.icon-ChevronLeftMinor:before {
+  content: "\e94f";
+}
+
+.icon-ChevronRightMinor:before {
+  content: "\e950";
+}
+
+.icon-ChevronUpMinor:before {
+  content: "\e951";
+}
+
+.icon-CircleAlertMajor:before {
+  content: "\e952";
+}
+
+.icon-CircleCancelMajor:before {
+  content: "\e953";
+}
+
+.icon-CircleCancelMinor:before {
+  content: "\e954";
+}
+
+.icon-CircleChevronDownMinor:before {
+  content: "\e955";
+}
+
+.icon-CircleChevronLeftMinor:before {
+  content: "\e956";
+}
+
+.icon-CircleChevronRightMinor:before {
+  content: "\e957";
+}
+
+.icon-CircleChevronUpMinor:before {
+  content: "\e958";
+}
+
+.icon-CircleDisabledMajor:before {
+  content: "\e959";
+}
+
+.icon-CircleDisableMinor:before {
+  content: "\e95a";
+}
+
+.icon-CircleDotsMajor:before {
+  content: "\e95b";
+}
+
+.icon-CircleDownMajor:before {
+  content: "\e95c";
+}
+
+.icon-CircleInformationMajor:before {
+  content: "\e95d";
+}
+
+.icon-CircleLeftMajor:before {
+  content: "\e95e";
+}
+
+.icon-CircleMinusMajor:before {
+  content: "\e95f";
+}
+
+.icon-CircleMinusMinor:before {
+  content: "\e960";
+}
+
+.icon-CircleMinusOutlineMinor:before {
+  content: "\e961";
+}
+
+.icon-CirclePlusMajor:before {
+  content: "\e962";
+}
+
+.icon-CirclePlusMinor:before {
+  content: "\e963";
+}
+
+.icon-CirclePlusOutlineMinor:before {
+  content: "\e964";
+}
+
+.icon-CircleRightMajor:before {
+  content: "\e965";
+}
+
+.icon-CircleTickMajor:before {
+  content: "\e966";
+}
+
+.icon-CircleTickMinor:before {
+  content: "\e967";
+}
+
+.icon-CircleTickOutlineMinor:before {
+  content: "\e968";
+}
+
+.icon-CircleUpMajor:before {
+  content: "\e969";
+}
+
+.icon-ClipboardMinor:before {
+  content: "\e96a";
+}
+
+.icon-ClockMajor:before {
+  content: "\e96b";
+}
+
+.icon-ClockMinor:before {
+  content: "\e96c";
+}
+
+.icon-CodeMajor:before {
+  content: "\e96d";
+}
+
+.icon-CodeMinor:before {
+  content: "\e96e";
+}
+
+.icon-CollectionReferenceMinor:before {
+  content: "\e96f";
+}
+
+.icon-CollectionsMajor:before {
+  content: "\e970";
+}
+
+.icon-ColorNoneMinor:before {
+  content: "\e971";
+}
+
+.icon-ColorsMajor:before {
+  content: "\e972";
+}
+
+.icon-Column1Major:before {
+  content: "\e973";
+}
+
+.icon-Columns2Major:before {
+  content: "\e974";
+}
+
+.icon-Columns3Major:before {
+  content: "\e975";
+}
+
+.icon-Columns3Minor:before {
+  content: "\e976";
+}
+
+.icon-ColumnWithTextMajor:before {
+  content: "\e977";
+}
+
+.icon-ComposeMajor:before {
+  content: "\e978";
+}
+
+.icon-ConfettiMajor:before {
+  content: "\e979";
+}
+
+.icon-ConnectMinor:before {
+  content: "\e97a";
+}
+
+.icon-ContentMinor:before {
+  content: "\e97b";
+}
+
+.icon-ConversationMinor:before {
+  content: "\e97c";
+}
+
+.icon-CreditCardCancelMajor:before {
+  content: "\e97d";
+}
+
+.icon-CreditCardMajor:before {
+  content: "\e97e";
+}
+
+.icon-CreditCardPercentMajor:before {
+  content: "\e97f";
+}
+
+.icon-CreditCardSecureMajor:before {
+  content: "\e980";
+}
+
+.icon-CurrencyConvertMinor:before {
+  content: "\e981";
+}
+
+.icon-CustomerMinusMajor:before {
+  content: "\e982";
+}
+
+.icon-CustomerPlusMajor:before {
+  content: "\e983";
+}
+
+.icon-CustomersMajor:before {
+  content: "\e984";
+}
+
+.icon-CustomersMinor:before {
+  content: "\e985";
+}
+
+.icon-DataDrivenModelMinor:before {
+  content: "\e986";
+}
+
+.icon-DataVisualizationMajor:before {
+  content: "\e987";
+}
+
+.icon-DecimalMinor:before {
+  content: "\e988";
+}
+
+.icon-DeleteMajor:before {
+  content: "\e989";
+}
+
+.icon-DeleteMinor:before {
+  content: "\e98a";
+}
+
+.icon-DesktopMajor:before {
+  content: "\e98b";
+}
+
+.icon-DetailedPopUpMajor:before {
+  content: "\e98c";
+}
+
+.icon-DiamondAlertMajor:before {
+  content: "\e98d";
+}
+
+.icon-DiamondAlertMinor:before {
+  content: "\e98e";
+}
+
+.icon-DigitalMediaReceiverMajor:before {
+  content: "\e98f";
+}
+
+.icon-DiscountAutomaticMajor:before {
+  content: "\e990";
+}
+
+.icon-DiscountCodeMajor:before {
+  content: "\e991";
+}
+
+.icon-DiscountsMajor:before {
+  content: "\e992";
+}
+
+.icon-DiscountsMinor:before {
+  content: "\e993";
+}
+
+.icon-DisputeMinor:before {
+  content: "\e994";
+}
+
+.icon-DnsSettingsMajor:before {
+  content: "\e995";
+}
+
+.icon-DomainNewMajor:before {
+  content: "\e996";
+}
+
+.icon-DomainRedirectMinor:before {
+  content: "\e997";
+}
+
+.icon-DomainsMajor:before {
+  content: "\e998";
+}
+
+.icon-DraftOrdersMajor:before {
+  content: "\e999";
+}
+
+.icon-DragDropMajor:before {
+  content: "\e99a";
+}
+
+.icon-DragHandleMinor:before {
+  content: "\e99b";
+}
+
+.icon-DropdownMinor:before {
+  content: "\e99c";
+}
+
+.icon-DuplicateMinor:before {
+  content: "\e99d";
+}
+
+.icon-DynamicSourceMajor:before {
+  content: "\e99e";
+}
+
+.icon-DynamicSourceMinor:before {
+  content: "\e99f";
+}
+
+.icon-EditMajor:before {
+  content: "\e9a0";
+}
+
+.icon-EditMinor:before {
+  content: "\e9a1";
+}
+
+.icon-EmailMajor:before {
+  content: "\e9a2";
+}
+
+.icon-EmailNewsletterMajor:before {
+  content: "\e9a3";
+}
+
+.icon-EmbedMinor:before {
+  content: "\e9a4";
+}
+
+.icon-EnableSelectionMinor:before {
+  content: "\e9a5";
+}
+
+.icon-EnterMajor:before {
+  content: "\e9a6";
+}
+
+.icon-EnvelopeMajor:before {
+  content: "\e9a7";
+}
+
+.icon-ExchangeMajor:before {
+  content: "\e9a8";
+}
+
+.icon-ExistingInventoryMajor:before {
+  content: "\e9a9";
+}
+
+.icon-ExitMajor:before {
+  content: "\e9aa";
+}
+
+.icon-ExploreImagesMajor:before {
+  content: "\e9ab";
+}
+
+.icon-ExportMinor:before {
+  content: "\e9ac";
+}
+
+.icon-ExtendMajor:before {
+  content: "\e9ad";
+}
+
+.icon-ExtendMinor:before {
+  content: "\e9ae";
+}
+
+.icon-ExternalMinor:before {
+  content: "\e9af";
+}
+
+.icon-ExternalSmallMinor:before {
+  content: "\e9b0";
+}
+
+.icon-EyeDropperMinor:before {
+  content: "\e9b1";
+}
+
+.icon-FaviconMajor:before {
+  content: "\e9b2";
+}
+
+.icon-FavoriteMajor:before {
+  content: "\e9b3";
+}
+
+.icon-FeaturedCollectionMajor:before {
+  content: "\e9b4";
+}
+
+.icon-FeaturedContentMajor:before {
+  content: "\e9b5";
+}
+
+.icon-FileMinor:before {
+  content: "\e9b6";
+}
+
+.icon-FilterMajor:before {
+  content: "\e9b7";
+}
+
+.icon-FilterMinor:before {
+  content: "\e9b8";
+}
+
+.icon-FinancesMajor:before {
+  content: "\e9b9";
+}
+
+.icon-FinancesMinor:before {
+  content: "\e9ba";
+}
+
+.icon-FirstClickModelMinor:before {
+  content: "\e9bb";
+}
+
+.icon-FirstOrderMajor:before {
+  content: "\e9bc";
+}
+
+.icon-FirstVisitMajor:before {
+  content: "\e9bd";
+}
+
+.icon-FlagMajor:before {
+  content: "\e9be";
+}
+
+.icon-FlipCameraMajor:before {
+  content: "\e9bf";
+}
+
+.icon-FolderDownMajor:before {
+  content: "\e9c0";
+}
+
+.icon-FolderMajor:before {
+  content: "\e9c1";
+}
+
+.icon-FolderMinusMajor:before {
+  content: "\e9c2";
+}
+
+.icon-FolderPlusMajor:before {
+  content: "\e9c3";
+}
+
+.icon-FolderUpMajor:before {
+  content: "\e9c4";
+}
+
+.icon-FollowUpEmailMajor:before {
+  content: "\e9c5";
+}
+
+.icon-FoodMajor:before {
+  content: "\e9c6";
+}
+
+.icon-FooterMajor:before {
+  content: "\e9c7";
+}
+
+.icon-FormsMajor:before {
+  content: "\e9c8";
+}
+
+.icon-FraudProtectMajor:before {
+  content: "\e9c9";
+}
+
+.icon-FraudProtectMinor:before {
+  content: "\e9ca";
+}
+
+.icon-FraudProtectPendingMajor:before {
+  content: "\e9cb";
+}
+
+.icon-FraudProtectPendingMinor:before {
+  content: "\e9cc";
+}
+
+.icon-FraudProtectUnprotectedMajor:before {
+  content: "\e9cd";
+}
+
+.icon-FraudProtectUnprotectedMinor:before {
+  content: "\e9ce";
+}
+
+.icon-FulfillmentFulfilledMajor:before {
+  content: "\e9cf";
+}
+
+.icon-FulfillmentOnHoldMajor:before {
+  content: "\e9d0";
+}
+
+.icon-GamesConsoleMajor:before {
+  content: "\e9d1";
+}
+
+.icon-GiftCardMajor:before {
+  content: "\e9d2";
+}
+
+.icon-GiftCardMinor:before {
+  content: "\e9d3";
+}
+
+.icon-GlobeMajor:before {
+  content: "\e9d4";
+}
+
+.icon-GlobeMinor:before {
+  content: "\e9d5";
+}
+
+.icon-GrammarMajor:before {
+  content: "\e9d6";
+}
+
+.icon-HashtagMajor:before {
+  content: "\e9d7";
+}
+
+.icon-HashtagMinor:before {
+  content: "\e9d8";
+}
+
+.icon-HeaderMajor:before {
+  content: "\e9d9";
+}
+
+.icon-HeartMajor:before {
+  content: "\e9da";
+}
+
+.icon-HideKeyboardMajor:before {
+  content: "\e9db";
+}
+
+.icon-HideMinor:before {
+  content: "\e9dc";
+}
+
+.icon-HintMajor:before {
+  content: "\e9dd";
+}
+
+.icon-HomeMajor:before {
+  content: "\e9de";
+}
+
+.icon-HomeMinor:before {
+  content: "\e9df";
+}
+
+.icon-HorizontalDotsMinor:before {
+  content: "\e9e0";
+}
+
+.icon-IconsMajor:before {
+  content: "\e9e1";
+}
+
+.icon-IdentityCardMajor:before {
+  content: "\e9e2";
+}
+
+.icon-IllustrationMajor:before {
+  content: "\e9e3";
+}
+
+.icon-ImageAltMajor:before {
+  content: "\e9e4";
+}
+
+.icon-ImageAltMinor:before {
+  content: "\e9e5";
+}
+
+.icon-ImageMajor:before {
+  content: "\e9e6";
+}
+
+.icon-ImagesMajor:before {
+  content: "\e9e7";
+}
+
+.icon-ImageWithTextMajor:before {
+  content: "\e9e8";
+}
+
+.icon-ImageWithTextOverlayMajor:before {
+  content: "\e9e9";
+}
+
+.icon-ImportMinor:before {
+  content: "\e9ea";
+}
+
+.icon-ImportStoreMajor:before {
+  content: "\e9eb";
+}
+
+.icon-InactiveLocationMajor:before {
+  content: "\e9ec";
+}
+
+.icon-InactiveLocationMinor:before {
+  content: "\e9ed";
+}
+
+.icon-IncomingMajor:before {
+  content: "\e9ee";
+}
+
+.icon-InfoMinor:before {
+  content: "\e9ef";
+}
+
+.icon-InsertDynamicSourceMajor:before {
+  content: "\e9f0";
+}
+
+.icon-InsertDynamicSourceMinor:before {
+  content: "\e9f1";
+}
+
+.icon-InstallMinor:before {
+  content: "\e9f2";
+}
+
+.icon-InventoryMajor:before {
+  content: "\e9f3";
+}
+
+.icon-InviteMinor:before {
+  content: "\e9f4";
+}
+
+.icon-IqMajor:before {
+  content: "\e9f5";
+}
+
+.icon-JobsMajor:before {
+  content: "\e9f6";
+}
+
+.icon-KeyboardMajor:before {
+  content: "\e9f7";
+}
+
+.icon-KeyboardMinor:before {
+  content: "\e9f8";
+}
+
+.icon-KeyMajor:before {
+  content: "\e9f9";
+}
+
+.icon-LabelPrinterMajor:before {
+  content: "\e9fa";
+}
+
+.icon-LandingPageMajor:before {
+  content: "\e9fb";
+}
+
+.icon-LanguageMinor:before {
+  content: "\e9fc";
+}
+
+.icon-LastClickModelMinor:before {
+  content: "\e9fd";
+}
+
+.icon-LastNonDirectClickModelMinor:before {
+  content: "\e9fe";
+}
+
+.icon-LegalMajor:before {
+  content: "\e9ff";
+}
+
+.icon-LinearModelMinor:before {
+  content: "\ea00";
+}
+
+.icon-LinkMinor:before {
+  content: "\ea01";
+}
+
+.icon-ListMajor:before {
+  content: "\ea02";
+}
+
+.icon-LiveViewMajor:before {
+  content: "\ea03";
+}
+
+.icon-LocationMajor:before {
+  content: "\ea04";
+}
+
+.icon-LocationsMinor:before {
+  content: "\ea05";
+}
+
+.icon-LockMajor:before {
+  content: "\ea06";
+}
+
+.icon-LockMinor:before {
+  content: "\ea07";
+}
+
+.icon-LogoBlockMajor:before {
+  content: "\ea08";
+}
+
+.icon-LogOutMinor:before {
+  content: "\ea09";
+}
+
+.icon-MagicMajor:before {
+  content: "\ea0a";
+}
+
+.icon-MagicMinor:before {
+  content: "\ea0b";
+}
+
+.icon-ManagedStoreMajor:before {
+  content: "\ea0c";
+}
+
+.icon-MarketingMajor:before {
+  content: "\ea0d";
+}
+
+.icon-MarketingMinor:before {
+  content: "\ea0e";
+}
+
+.icon-MarketsMajor:before {
+  content: "\ea0f";
+}
+
+.icon-MarkFulfilledMinor:before {
+  content: "\ea10";
+}
+
+.icon-MarkPaidMinor:before {
+  content: "\ea11";
+}
+
+.icon-MaximizeMajor:before {
+  content: "\ea12";
+}
+
+.icon-MaximizeMinor:before {
+  content: "\ea13";
+}
+
+.icon-MeasurementMinor:before {
+  content: "\ea14";
+}
+
+.icon-MentionMajor:before {
+  content: "\ea15";
+}
+
+.icon-MergeMinor:before {
+  content: "\ea16";
+}
+
+.icon-MetafieldsMajor:before {
+  content: "\ea17";
+}
+
+.icon-MetafieldsMinor:before {
+  content: "\ea18";
+}
+
+.icon-MetaobjectMinor:before {
+  content: "\ea19";
+}
+
+.icon-MetaobjectReferenceMinor:before {
+  content: "\ea1a";
+}
+
+.icon-MicrophoneMajor:before {
+  content: "\ea1b";
+}
+
+.icon-MinimizeMajor:before {
+  content: "\ea1c";
+}
+
+.icon-MinimizeMinor:before {
+  content: "\ea1d";
+}
+
+.icon-MinusMinor:before {
+  content: "\ea1e";
+}
+
+.icon-MobileAcceptMajor:before {
+  content: "\ea1f";
+}
+
+.icon-MobileBackArrowMajor:before {
+  content: "\ea20";
+}
+
+.icon-MobileCancelMajor:before {
+  content: "\ea21";
+}
+
+.icon-MobileChevronMajor:before {
+  content: "\ea22";
+}
+
+.icon-MobileHamburgerMajor:before {
+  content: "\ea23";
+}
+
+.icon-MobileHorizontalDotsMajor:before {
+  content: "\ea24";
+}
+
+.icon-MobileMajor:before {
+  content: "\ea25";
+}
+
+.icon-MobilePlusMajor:before {
+  content: "\ea26";
+}
+
+.icon-MobileVerticalDotsMajor:before {
+  content: "\ea27";
+}
+
+.icon-MonerisMajor:before {
+  content: "\ea28";
+}
+
+.icon-MoneyMinor:before {
+  content: "\ea29";
+}
+
+.icon-NatureMajor:before {
+  content: "\ea2a";
+}
+
+.icon-NavigationMajor:before {
+  content: "\ea2b";
+}
+
+.icon-NoteMajor:before {
+  content: "\ea2c";
+}
+
+.icon-NoteMinor:before {
+  content: "\ea2d";
+}
+
+.icon-NotificationMajor:before {
+  content: "\ea2e";
+}
+
+.icon-OnlineStoreMajor:before {
+  content: "\ea2f";
+}
+
+.icon-OnlineStoreMinor:before {
+  content: "\ea30";
+}
+
+.icon-OrdersMajor:before {
+  content: "\ea31";
+}
+
+.icon-OrdersMinor:before {
+  content: "\ea32";
+}
+
+.icon-OrderStatusMinor:before {
+  content: "\ea33";
+}
+
+.icon-OrganizationMajor:before {
+  content: "\ea34";
+}
+
+.icon-OutgoingMajor:before {
+  content: "\ea35";
+}
+
+.icon-PackageMajor:before {
+  content: "\ea36";
+}
+
+.icon-PageDownMajor:before {
+  content: "\ea37";
+}
+
+.icon-PageMajor:before {
+  content: "\ea38";
+}
+
+.icon-PageMinusMajor:before {
+  content: "\ea39";
+}
+
+.icon-PagePlusMajor:before {
+  content: "\ea3a";
+}
+
+.icon-PageReferenceMinor:before {
+  content: "\ea3b";
+}
+
+.icon-PageUpMajor:before {
+  content: "\ea3c";
+}
+
+.icon-PaginationEndMinor:before {
+  content: "\ea3d";
+}
+
+.icon-PaginationStartMinor:before {
+  content: "\ea3e";
+}
+
+.icon-PaintBrushMajor:before {
+  content: "\ea3f";
+}
+
+.icon-PaperCheckMajor:before {
+  content: "\ea40";
+}
+
+.icon-PaperCheckMinor:before {
+  content: "\ea41";
+}
+
+.icon-PasskeyMajor:before {
+  content: "\ea42";
+}
+
+.icon-PasskeyMinor:before {
+  content: "\ea43";
+}
+
+.icon-PauseCircleMajor:before {
+  content: "\ea44";
+}
+
+.icon-PauseMajor:before {
+  content: "\ea45";
+}
+
+.icon-PauseMinor:before {
+  content: "\ea46";
+}
+
+.icon-PaymentsMajor:before {
+  content: "\ea47";
+}
+
+.icon-PersonalizedTextMajor:before {
+  content: "\ea48";
+}
+
+.icon-PhoneInMajor:before {
+  content: "\ea49";
+}
+
+.icon-PhoneMajor:before {
+  content: "\ea4a";
+}
+
+.icon-PhoneOutMajor:before {
+  content: "\ea4b";
+}
+
+.icon-PinMajor:before {
+  content: "\ea4c";
+}
+
+.icon-PinMinor:before {
+  content: "\ea4d";
+}
+
+.icon-PinUnfilledMajor:before {
+  content: "\ea4e";
+}
+
+.icon-PinUnfilledMinor:before {
+  content: "\ea4f";
+}
+
+.icon-PlanMajor:before {
+  content: "\ea50";
+}
+
+.icon-PlanMinor:before {
+  content: "\ea51";
+}
+
+.icon-PlayCircleMajor:before {
+  content: "\ea52";
+}
+
+.icon-PlayMajor:before {
+  content: "\ea53";
+}
+
+.icon-PlayMinor:before {
+  content: "\ea54";
+}
+
+.icon-PlusMinor:before {
+  content: "\ea55";
+}
+
+.icon-PointOfSaleMajor:before {
+  content: "\ea56";
+}
+
+.icon-PopularMajor:before {
+  content: "\ea57";
+}
+
+.icon-PositionBasedModelMinor:before {
+  content: "\ea58";
+}
+
+.icon-PriceLookupMinor:before {
+  content: "\ea59";
+}
+
+.icon-PrintMajor:before {
+  content: "\ea5a";
+}
+
+.icon-PrintMinor:before {
+  content: "\ea5b";
+}
+
+.icon-ProductCostMajor:before {
+  content: "\ea5c";
+}
+
+.icon-ProductReferenceMinor:before {
+  content: "\ea5d";
+}
+
+.icon-ProductReturnsMinor:before {
+  content: "\ea5e";
+}
+
+.icon-ProductsMajor:before {
+  content: "\ea5f";
+}
+
+.icon-ProductsMinor:before {
+  content: "\ea60";
+}
+
+.icon-ProfileMajor:before {
+  content: "\ea61";
+}
+
+.icon-ProfileMinor:before {
+  content: "\ea62";
+}
+
+.icon-PromoteMinor:before {
+  content: "\ea63";
+}
+
+.icon-QuestionMarkInverseMajor:before {
+  content: "\ea64";
+}
+
+.icon-QuestionMarkInverseMinor:before {
+  content: "\ea65";
+}
+
+.icon-QuestionMarkMajor:before {
+  content: "\ea66";
+}
+
+.icon-QuestionMarkMinor:before {
+  content: "\ea67";
+}
+
+.icon-QuickSaleMajor:before {
+  content: "\ea68";
+}
+
+.icon-ReadTimeMinor:before {
+  content: "\ea69";
+}
+
+.icon-ReceiptMajor:before {
+  content: "\ea6a";
+}
+
+.icon-RecentSearchesMajor:before {
+  content: "\ea6b";
+}
+
+.icon-RedoMajor:before {
+  content: "\ea6c";
+}
+
+.icon-ReferralCodeMajor:before {
+  content: "\ea6d";
+}
+
+.icon-ReferralMajor:before {
+  content: "\ea6e";
+}
+
+.icon-RefreshMajor:before {
+  content: "\ea6f";
+}
+
+.icon-RefreshMinor:before {
+  content: "\ea70";
+}
+
+.icon-RefundMajor:before {
+  content: "\ea71";
+}
+
+.icon-RefundMinor:before {
+  content: "\ea72";
+}
+
+.icon-RemoveProductMajor:before {
+  content: "\ea73";
+}
+
+.icon-RepeatOrderMajor:before {
+  content: "\ea74";
+}
+
+.icon-ReplaceMajor:before {
+  content: "\ea75";
+}
+
+.icon-ReplayMinor:before {
+  content: "\ea76";
+}
+
+.icon-ReportMinor:before {
+  content: "\ea77";
+}
+
+.icon-ReportsMajor:before {
+  content: "\ea78";
+}
+
+.icon-ResetMinor:before {
+  content: "\ea79";
+}
+
+.icon-ResourcesMajor:before {
+  content: "\ea7a";
+}
+
+.icon-ReturnMinor:before {
+  content: "\ea7b";
+}
+
+.icon-ReturnsMajor:before {
+  content: "\ea7c";
+}
+
+.icon-RichTextMinor:before {
+  content: "\ea7d";
+}
+
+.icon-RiskMajor:before {
+  content: "\ea7e";
+}
+
+.icon-RiskMinor:before {
+  content: "\ea7f";
+}
+
+.icon-Rows2Major:before {
+  content: "\ea80";
+}
+
+.icon-SandboxMajor:before {
+  content: "\ea81";
+}
+
+.icon-SaveMinor:before {
+  content: "\ea82";
+}
+
+.icon-SearchMajor:before {
+  content: "\ea83";
+}
+
+.icon-SearchMinor:before {
+  content: "\ea84";
+}
+
+.icon-SectionMajor:before {
+  content: "\ea85";
+}
+
+.icon-SecureMajor:before {
+  content: "\ea86";
+}
+
+.icon-SelectMinor:before {
+  content: "\ea87";
+}
+
+.icon-SendMajor:before {
+  content: "\ea88";
+}
+
+.icon-SettingsMajor:before {
+  content: "\ea89";
+}
+
+.icon-SettingsMinor:before {
+  content: "\ea8a";
+}
+
+.icon-ShareIosMinor:before {
+  content: "\ea8b";
+}
+
+.icon-ShareMinor:before {
+  content: "\ea8c";
+}
+
+.icon-ShipmentMajor:before {
+  content: "\ea8d";
+}
+
+.icon-ShopcodesMajor:before {
+  content: "\ea8e";
+}
+
+.icon-SidebarLeftMajor:before {
+  content: "\ea8f";
+}
+
+.icon-SidebarRightMajor:before {
+  content: "\ea90";
+}
+
+.icon-SimplifyMajor:before {
+  content: "\ea91";
+}
+
+.icon-SimplifyMinor:before {
+  content: "\ea92";
+}
+
+.icon-SlideshowMajor:before {
+  content: "\ea93";
+}
+
+.icon-SmileyHappyMajor:before {
+  content: "\ea94";
+}
+
+.icon-SmileyJoyMajor:before {
+  content: "\ea95";
+}
+
+.icon-SmileyNeutralMajor:before {
+  content: "\ea96";
+}
+
+.icon-SmileySadMajor:before {
+  content: "\ea97";
+}
+
+.icon-SocialAdMajor:before {
+  content: "\ea98";
+}
+
+.icon-SocialPostMajor:before {
+  content: "\ea99";
+}
+
+.icon-SoftPackMajor:before {
+  content: "\ea9a";
+}
+
+.icon-SortAscendingMajor .path1:before {
+  content: "\ea9b";
+  color: rgb(0, 0, 0);
+}
+
+.icon-SortAscendingMajor .path2:before {
+  content: "\ea9c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+  opacity: 0.5;
+}
+
+.icon-SortDescendingMajor .path1:before {
+  content: "\ea9d";
+  color: rgb(0, 0, 0);
+  opacity: 0.5;
+}
+
+.icon-SortDescendingMajor .path2:before {
+  content: "\ea9e";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+
+.icon-SortMinor:before {
+  content: "\ea9f";
+}
+
+.icon-SoundMajor:before {
+  content: "\eaa0";
+}
+
+.icon-StarFilledMinor:before {
+  content: "\eaa1";
+}
+
+.icon-StarOutlineMinor:before {
+  content: "\eaa2";
+}
+
+.icon-StatusActiveMajor:before {
+  content: "\eaa3";
+}
+
+.icon-StoreMajor:before {
+  content: "\eaa4";
+}
+
+.icon-StoreMinor:before {
+  content: "\eaa5";
+}
+
+.icon-StoreStatusMajor:before {
+  content: "\eaa6";
+}
+
+.icon-TabletMajor:before {
+  content: "\eaa7";
+}
+
+.icon-TapChipMajor:before {
+  content: "\eaa8";
+}
+
+.icon-TaxMajor:before {
+  content: "\eaa9";
+}
+
+.icon-TeamMajor:before {
+  content: "\eaaa";
+}
+
+.icon-TemplateMajor:before {
+  content: "\eaab";
+}
+
+.icon-TemplateMinor:before {
+  content: "\eaac";
+}
+
+.icon-TextAlignmentCenterMajor:before {
+  content: "\eaad";
+}
+
+.icon-TextAlignmentLeftMajor:before {
+  content: "\eaae";
+}
+
+.icon-TextAlignmentRightMajor:before {
+  content: "\eaaf";
+}
+
+.icon-TextBlockMajor:before {
+  content: "\eab0";
+}
+
+.icon-TextMajor:before {
+  content: "\eab1";
+}
+
+.icon-ThemeEditMajor:before {
+  content: "\eab2";
+}
+
+.icon-ThemesMajor:before {
+  content: "\eab3";
+}
+
+.icon-ThemeStoreMajor:before {
+  content: "\eab4";
+}
+
+.icon-ThumbsDownMajor:before {
+  content: "\eab5";
+}
+
+.icon-ThumbsDownMinor:before {
+  content: "\eab6";
+}
+
+.icon-ThumbsUpMajor:before {
+  content: "\eab7";
+}
+
+.icon-ThumbsUpMinor:before {
+  content: "\eab8";
+}
+
+.icon-TickMinor:before {
+  content: "\eab9";
+}
+
+.icon-TickSmallMinor:before {
+  content: "\eaba";
+}
+
+.icon-TimeDecayModelMinor:before {
+  content: "\eabb";
+}
+
+.icon-TimelineAttachmentMajor:before {
+  content: "\eabc";
+}
+
+.icon-TipsMajor:before {
+  content: "\eabd";
+}
+
+.icon-TitleMinor:before {
+  content: "\eabe";
+}
+
+.icon-ToggleMinor:before {
+  content: "\eabf";
+}
+
+.icon-ToolsMajor:before {
+  content: "\eac0";
+}
+
+.icon-TransactionFeeDollarMajor:before {
+  content: "\eac1";
+}
+
+.icon-TransactionFeeEuroMajor:before {
+  content: "\eac2";
+}
+
+.icon-TransactionFeePoundMajor:before {
+  content: "\eac3";
+}
+
+.icon-TransactionFeeRupeeMajor:before {
+  content: "\eac4";
+}
+
+.icon-TransactionFeeYenMajor:before {
+  content: "\eac5";
+}
+
+.icon-TransactionMajor:before {
+  content: "\eac6";
+}
+
+.icon-TransferInMajor:before {
+  content: "\eac7";
+}
+
+.icon-TransferMajor:before {
+  content: "\eac8";
+}
+
+.icon-TransferOutMajor:before {
+  content: "\eac9";
+}
+
+.icon-TransferWithinShopifyMajor:before {
+  content: "\eaca";
+}
+
+.icon-TransportMajor:before {
+  content: "\eacb";
+}
+
+.icon-TroubleshootMajor:before {
+  content: "\eacc";
+}
+
+.icon-TypeMajor:before {
+  content: "\eacd";
+}
+
+.icon-TypeMinor:before {
+  content: "\eace";
+}
+
+.icon-UndoMajor:before {
+  content: "\eacf";
+}
+
+.icon-UnfulfilledMajor:before {
+  content: "\ead0";
+}
+
+.icon-UnknownDeviceMajor:before {
+  content: "\ead1";
+}
+
+.icon-UpdateInventoryMajor:before {
+  content: "\ead2";
+}
+
+.icon-UploadMajor:before {
+  content: "\ead3";
+}
+
+.icon-VariantMajor:before {
+  content: "\ead4";
+}
+
+.icon-ViewMajor:before {
+  content: "\ead5";
+}
+
+.icon-ViewMinor:before {
+  content: "\ead6";
+}
+
+.icon-ViewportNarrowMajor:before {
+  content: "\ead7";
+}
+
+.icon-ViewportShortMajor:before {
+  content: "\ead8";
+}
+
+.icon-ViewportTallMajor:before {
+  content: "\ead9";
+}
+
+.icon-ViewportWideMajor:before {
+  content: "\eada";
+}
+
+.icon-VocabularyMajor:before {
+  content: "\eadb";
+}
+
+.icon-VolumeMinor:before {
+  content: "\eadc";
+}
+
+.icon-WandMajor:before {
+  content: "\eadd";
+}
+
+.icon-WandMinor:before {
+  content: "\eade";
+}
+
+.icon-WearableMajor:before {
+  content: "\eadf";
+}
+
+.icon-WeightMinor:before {
+  content: "\eae0";
+}
+
+.icon-WholesaleMajor:before {
+  content: "\eae1";
+}
+
+.icon-WifiMajor:before {
+  content: "\eae2";
+}
