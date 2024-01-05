@@ -35,7 +35,7 @@ export const DashBoard: FC = () => {
 
   useEffect(() => {
     getDashUsersQuery()
-  }, [rightColumn]);
+  }, [rightColumn]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>

@@ -75,7 +75,7 @@ export const useInitialRootStore = (callback?: () => void | Promise<void>) => {
         _unsubscribe();
       }
     };
-  }, []);
+  }, []);  // eslint-disable-line react-hooks/exhaustive-deps
 
   return { rootStore, rehydrated };
 };

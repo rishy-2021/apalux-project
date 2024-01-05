@@ -1,14 +1,14 @@
-import { flow, Instance, SnapshotIn, SnapshotOut, types } from 'mobx-state-tree';
+import { flow, types } from 'mobx-state-tree';
 import { save } from '../../utils/storage';
 import { withSetPropAction } from '../../utils/with-set-prop-action';
 import { Authentication } from '../auth/authentication';
-import { User } from './user';
+import { User, UserModel } from './user';
 
 export const UserStore = types
   .model('UserStore')
   .props({
     auth: types.optional(Authentication, {}),
-    user: types.optional(User, {}),
+    user: types.optional(UserModel, {}),
   })
   .actions(withSetPropAction)
   .actions((self) => ({
@@ -22,6 +22,3 @@ export const UserStore = types
     }
   }));
 
-export interface UserStore extends Instance<typeof UserStore> { }
-export interface UserStoreSnapshotOut extends SnapshotOut<typeof UserStore> { }
-export interface UserStoreSnapshotIn extends SnapshotIn<typeof UserStore> { }

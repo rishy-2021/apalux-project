@@ -137,11 +137,11 @@ export const useFastQuery = <
       }
       setloading(false);
     });
-  }, []);
+  }, []);  // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     query(requestData);
-  }, []);
+  }, []);  // eslint-disable-line react-hooks/exhaustive-deps
 
   return { query, error, loading };
 };

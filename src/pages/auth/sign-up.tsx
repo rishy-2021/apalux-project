@@ -63,6 +63,7 @@ export const SignUp: FC = observer(function SignUp() {
         <div className='w-full p-10'>
           <div className='max-w-lg text-center mx-auto'>
             <img
+              alt='wlcome image'
               className='w-full'
               src={imageRegistry.welcomeFacesImage}
             />

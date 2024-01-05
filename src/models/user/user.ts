@@ -1,6 +1,6 @@
-import { Instance, SnapshotIn, SnapshotOut, types } from 'mobx-state-tree';
+import { Instance, types } from 'mobx-state-tree';
 
-export const User = types.model('User').props({
+export const UserModel = types.model('User').props({
   _id: types.optional(types.string, ''),
   name: types.optional(types.string, ''),
   designation: types.optional(types.string, ''),
@@ -13,6 +13,4 @@ export const User = types.model('User').props({
   })),
 });
 
-export interface User extends Instance<typeof User> { }
-export interface UserSnapshotOut extends SnapshotOut<typeof User> { }
-export interface UserStoreSnapshotIn extends SnapshotIn<typeof User> { }
+export interface User extends Instance<typeof UserModel> { }
