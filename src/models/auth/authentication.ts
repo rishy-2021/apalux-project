@@ -2,10 +2,6 @@ import { flow, Instance, SnapshotIn, SnapshotOut, types } from 'mobx-state-tree'
 import { remove, save } from '../../utils/storage';
 import { withSetPropAction } from '../../utils/with-set-prop-action';
 
-/**
- * Model description here for TypeScript hints.
- */
-
 export const Authentication = types
   .model('Authentication')
   .props({

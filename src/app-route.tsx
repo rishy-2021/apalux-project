@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { suspend } from 'suspend-react';
 import { TopBar } from './components/top-bar';
@@ -11,12 +11,6 @@ import VerifyEmail from './pages/auth/verify-email';
 
 const AppRoute: React.FC = observer(() => {
   const location = useLocation();
-  const [width, setWidth] = useState<number>(window.innerWidth);
-
-  const handleWindowSizeChange = () => {
-    setWidth(window.innerWidth);
-  }
-
   const {
     userStore: {
       auth: { isAuthenticated },
@@ -26,12 +20,6 @@ const AppRoute: React.FC = observer(() => {
   suspend(async () => {
     if (!isAuthenticated) return;
   }, [isAuthenticated]);
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    }
-  }, []);
 
   if (!isAuthenticated) {
     return (

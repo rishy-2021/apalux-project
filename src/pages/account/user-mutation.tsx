@@ -1,7 +1,8 @@
+import React from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Button, Input, Select } from 'antd';
+import { Button, Input } from 'antd';
 import { observer } from 'mobx-react-lite';
-import { FC, useEffect, useMemo, useState } from 'react';
+import { FC } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
 import {addUserInput} from "../auth/auth.const"
@@ -9,7 +10,6 @@ import { useMutation } from '../../utils/api-hook';
 import { DashUser, userApi } from '../../services/api/user-api';
 import { useStores } from '../../utils/use-stores';
 import { User } from '../../models/user/user';
-import { values } from 'lodash';
 
 interface Props {
   user?: User
@@ -206,7 +206,7 @@ const UserMutation: FC<{ user?: User, onSuccess: (open: boolean) => void }> = ({
             <Button
               type='primary'
               className='w-full'
-              loading={creating}
+              loading={creating || updating}
               onClick={handleSubmit(handleOnValid, (err) => console.error(err))}
             >{user?.email ? 'Update' : 'Save'}</Button>
           </div>

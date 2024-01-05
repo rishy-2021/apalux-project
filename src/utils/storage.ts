@@ -79,5 +79,7 @@ export async function remove(key: string): Promise<boolean> {
 export async function clear(): Promise<void> {
   try {
     await LocalForage.clear();
-  } catch { }
+  } catch(err) {
+    console.log(err);
+  }
 }

@@ -1,10 +1,7 @@
-import React, { FC, useState } from 'react';
-import { useStores } from '../../utils/use-stores';
+import React, { FC } from 'react';
 import imageRegistry from '../../common/const/image-registry.const';
-import { User } from '../../models/user/user';
 import {  SignUpRequestBody, SignUpResponse, authenticationApi } from '../../services/api';
 import { useMutation } from '../../utils/api-hook';
-import { useTranslation } from 'react-i18next';
 import { Button, Input, message } from 'antd';
 import { observer } from 'mobx-react-lite';
 import { Controller, useForm } from 'react-hook-form';
@@ -14,13 +11,7 @@ import { signUpInput } from './auth.const';
 
 export const SignUp: FC = observer(function SignUp() {
 
-  const { t } = useTranslation();
-
-  const {
-    userStore: { updateUser },
-  } = useStores();
   const [messageApi, contextHolder] = message.useMessage();
-
 
   const validationSchema = z
     .object({
@@ -83,7 +74,7 @@ export const SignUp: FC = observer(function SignUp() {
       <div className={`flex w-full lg:w-1/2 flex-col justify-center items-center`}>
         <div className='w-full p-10'>
           <div className='max-w-sm mx-auto'>
-            <p className={`mb-10 font-bold text-2xl px-1`}>Let's get you started</p>
+            <p className={`mb-10 font-bold text-2xl px-1`}>Let&apos;s get you started</p>
             <p className={`mb-2 font-medium px-1`}>Your Email Address</p>
             <Controller
               control={control}

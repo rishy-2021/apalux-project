@@ -1,7 +1,7 @@
+import React from 'react';
 import { Avatar, Button, Card, Empty } from 'antd';
 import { FC, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
+import { DeleteOutlined } from '@ant-design/icons';
 import userImage from "../../assets/images/user.png"
 import { UserMutaion } from './user-mutation';
 import { useQuery } from '../../utils/api-hook';
@@ -18,7 +18,6 @@ export const DashBoard: FC = () => {
     }
   } = useStores();
 
-  const navigate = useNavigate();
   const [rightColumn, setRightColumn] = useState<{ open: boolean }>({ open: false })
   const [users, setUsers] = useState<DashUser[]>([])
   const [adminUser, setAdminUser] = useState<User>()

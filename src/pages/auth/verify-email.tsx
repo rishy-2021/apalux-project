@@ -1,13 +1,12 @@
 import { Button } from 'antd';
-import { useNavigate, useParams } from 'react-router-dom';
+import React from 'react';
+import { useParams } from 'react-router-dom';
 import { useQuery } from '../../utils/api-hook';
 import { authenticationApi } from '../../services/api';
-import { save } from '../../utils/storage';
 import { useStores } from '../../utils/use-stores';
 
 export default function VerifyEmail() {
 
-  const navigate = useNavigate()
   const { userStore: { setAuthentication } } = useStores();
   let { id , accessToken } = useParams();
 

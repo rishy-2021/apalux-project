@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { useStores } from "../../utils/use-stores";
 import { useMutation } from "../../utils/api-hook";
 import { SignInRequestBody, authenticationApi } from "../../services/api";

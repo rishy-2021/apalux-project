@@ -1,5 +1,4 @@
-import { flow, getSnapshot, Instance, SnapshotIn, SnapshotOut, types } from 'mobx-state-tree';
-import { clear } from 'suspend-react';
+import { flow, Instance, SnapshotIn, SnapshotOut, types } from 'mobx-state-tree';
 import { save } from '../../utils/storage';
 import { withSetPropAction } from '../../utils/with-set-prop-action';
 import { Authentication } from '../auth/authentication';
