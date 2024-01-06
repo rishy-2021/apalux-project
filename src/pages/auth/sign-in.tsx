@@ -3,7 +3,7 @@ import { useStores } from "../../utils/use-stores";
 import { useMutation } from "../../utils/api-hook";
 import { SignInRequestBody, authenticationApi } from "../../services/api";
 import { DateTime as d } from 'luxon';
-import { days, dayTimes, months, signInInput,  } from './auth.const';
+import { days, dayTimes, months, signInInput, } from './auth.const';
 import { Button, Input, message } from 'antd';
 import { Controller, useForm } from "react-hook-form";
 import { observer } from "mobx-react-lite";
@@ -21,7 +21,7 @@ export const SignIn: FC = observer(function SignIn() {
     })
 
   const { control, handleSubmit, formState: { errors } } = useForm({
-    defaultValues: signInInput ,
+    defaultValues: signInInput,
     resolver: zodResolver(validationSchema)
   })
 
@@ -30,7 +30,7 @@ export const SignIn: FC = observer(function SignIn() {
       setAuthentication(accessToken, user);
     },
     onError(err) {
-        error()
+      error()
     },
   });
 
@@ -43,7 +43,7 @@ export const SignIn: FC = observer(function SignIn() {
 
   const onSave = (values: SignInRequestBody) => {
     signInMutation({
-      requestBody:values
+      requestBody: values
     })
   }
 
@@ -52,7 +52,7 @@ export const SignIn: FC = observer(function SignIn() {
 
   return (
     <div className="flex flex-row flex-wrap h-screen">
-          {contextHolder}
+      {contextHolder}
       <div
         className={`flex w-full lg:w-[45%] items-center`}
         style={{ backgroundColor: currentDayTime.backgroundColor }}
@@ -82,7 +82,7 @@ export const SignIn: FC = observer(function SignIn() {
           </div>
         </div>
       </div>
-         <div className={`flex w-full lg:w-1/2 flex-col justify-center items-center`}>
+      <div className={`flex w-full lg:w-1/2 flex-col justify-center items-center`}>
         <div className='w-full p-10'>
           <div className='max-w-sm mx-auto'>
             <p className={`mb-10 font-bold text-2xl px-1`}>Glad to see you again</p>

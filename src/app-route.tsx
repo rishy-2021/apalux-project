@@ -24,22 +24,22 @@ const AppRoute: React.FC = observer(() => {
   if (!isAuthenticated) {
     return (
       <>
-      {!location.pathname.toLowerCase().includes("verify-email") &&<TopBar />}
-      <Routes>
-        <Route
-          path='signin'
-          element={<SignIn />}
-        />
-        <Route
-          path='signup'
-          element={<SignUp />}
-        />
+        {!location.pathname.toLowerCase().includes("verify-email") && <TopBar />}
+        <Routes>
           <Route
-          path='verify-email/:id/:accessToken'
-          element={<VerifyEmail />}
-        />
-        <Route path='*' element={<Navigate to='signin' replace />} />
-      </Routes>
+            path='signin'
+            element={<SignIn />}
+          />
+          <Route
+            path='signup'
+            element={<SignUp />}
+          />
+          <Route
+            path='verify-email/:id/:accessToken'
+            element={<VerifyEmail />}
+          />
+          <Route path='*' element={<Navigate to='signin' replace />} />
+        </Routes>
       </>
     );
   }
