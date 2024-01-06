@@ -8,10 +8,16 @@ export type AddUserPathParams = {
   id?:string
 }
 
-export type DashUser = AddUserRequestBody
+export type DashUser = {
+  _id: string;
+  email?:string
+  designation: string
+  name: string
+  address: Address
+}
 
 export type AddUserRequestBody = {
-    id?: string;
+    _id?: string;
     email?:string
     designation: string
     name: string
@@ -45,6 +51,15 @@ export type AddUserRequestBody = {
     }): Promise<ApiResponse<AddUserResponse>> {
       const {id} = pathParams
       return apiGateway.patch(`/auth/updateadminuser/${id}`, requestBody);
+    },
+
+    async deleteDashUser({
+      pathParams,
+    }: {
+      pathParams:AddUserPathParams,
+    }): Promise<ApiResponse<AddUserResponse>> {
+      const {id} = pathParams
+      return apiGateway.delete(`/auth/deleteuser/${id}`);
     },
 
     async getDashUsers(): Promise<ApiResponse<DashUser[]>> {

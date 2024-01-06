@@ -4,7 +4,7 @@ import { FC, useEffect, useState } from "react";
 import { DeleteOutlined } from "@ant-design/icons";
 import userImage from "../../assets/images/user.png";
 import { UserMutaion } from "./user-mutation";
-import { useQuery } from "../../utils/api-hook";
+import { useMutation, useQuery } from "../../utils/api-hook";
 import { DashUser, userApi } from "../../services/api/user-api";
 import { User } from "../../models/user/user";
 import { useStores } from "../../utils/use-stores";
@@ -25,6 +25,22 @@ export const DashBoard: FC = () => {
       setUsers(data);
     },
   });
+
+  const { mutate: getDashUserDelete } = useMutation(userApi.deleteDashUser, {
+    onSuccess: ({ data }) => {
+      getDashUsersQuery()
+    },
+  });
+
+  const deleteUser = (id: string) => {
+    getDashUserDelete({
+      pathParams:{
+        id: id
+      }
+    })
+  }
+
+  console.log(rightColumn);
 
   useEffect(() => {
     getDashUsersQuery();
@@ -54,7 +70,7 @@ export const DashBoard: FC = () => {
           </div>
           {users.length ? (
             <div className="flex flex-wrap ">
-              {users.map(({ name, designation }, idx) => (
+              {users.map(({_id, name, designation }, idx) => (
                 <Card
                   key={idx}
                   style={{ width: 285, margin: "0px auto", marginBottom: 10 }}
@@ -66,7 +82,7 @@ export const DashBoard: FC = () => {
                       }
                     />
                   }
-                  actions={[<DeleteOutlined key="setting" />]}
+                  actions={[<DeleteOutlined key="setting" onClick={()=>deleteUser(_id)}/>]}
                 >
                   <div className="flex flex-row -m-3">
                     <Avatar
@@ -148,7 +164,7 @@ export const DashBoard: FC = () => {
               >
                 <Button
                   onClick={() => {
-                    setRightColumn({ open: true });
+                    setRightColumn({ open: true, user: user });
                   }}
                   type="primary"
                 >
