@@ -102,7 +102,7 @@ const UserMutation: FC<{ user?: User, onSuccess: (open: boolean) => void }> = ({
     } else{
       reset()
     }
-  },[user])
+  },[user]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>

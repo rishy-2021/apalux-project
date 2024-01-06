@@ -8,7 +8,7 @@ interface Props {
   onClick: (open: boolean, user: User) => void;
 }
 
-export const AdminUserCard: FC<Props> = ({ user, onClick: onClick }) => {
+export const AdminUserCard: FC<Props> = ({ user, onClick }) => {
   return (
 
     <div className="flex w-full min-w-[450px] flex-col items-center bg-red-100 bg-cover bg-clip-border p-[16px] rounded-2xl pb-5">
