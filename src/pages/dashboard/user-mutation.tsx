@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button, Input } from 'antd';
 import { observer } from 'mobx-react-lite';
@@ -38,7 +38,7 @@ export const UserMutaion: FC<Props> = observer(({ rightColumnOpen, toggleRightCo
           </p>
           <Button onClick={() => rightColumnOpen && toggleRightColumn(false)} shape='circle' icon={<i className='icon-CancelMajor' />} />
         </div>
-        <UserMutation user={user} onSuccess={handleOnSuccess} />
+        <UserMutation key={user?._id} user={user} onSuccess={handleOnSuccess} />
       </div>
   )
 })
@@ -96,6 +96,13 @@ const UserMutation: FC<{ user?: User, onSuccess: (open: boolean) => void }> = ({
       });
     }
   }
+  useEffect(()=>{
+    if(user?._id){
+      reset(user)
+    } else{
+      reset()
+    }
+  },[user])
 
   return (
     <>

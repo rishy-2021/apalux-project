@@ -25,6 +25,7 @@ module.exports = {
       yellow: colors.yellow,
       green: colors.green,
       gray: colors.gray,
+      orange:colors.orange,
       contrast: {
         3: 'rgba(9,14,35,0.03)',
         5: 'rgba(9,14,35,0.05)',

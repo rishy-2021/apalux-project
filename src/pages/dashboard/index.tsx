@@ -40,8 +40,6 @@ export const DashBoard: FC = () => {
     })
   }
 
-  console.log(rightColumn);
-
   useEffect(() => {
     getDashUsersQuery();
   }, [rightColumn]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -73,7 +71,7 @@ export const DashBoard: FC = () => {
               {users.map(({_id, name, designation }, idx) => (
                 <Card
                   key={idx}
-                  style={{ width: 285, margin: "0px auto", marginBottom: 10 }}
+                  style={{ width: 285, margin: users.length >3 ? "0px auto" : "10px", marginBottom: 10}}
                   cover={
                     <img
                       alt="example"
@@ -109,7 +107,7 @@ export const DashBoard: FC = () => {
           )}
         </div>
         <div className={`${rightColumn.open && "mr-5"}`}>
-          <div className="bg-slate-50 flex w-full min-w-[450px] flex-col items-center bg-white bg-cover bg-clip-border p-[16px] rounded-2xl pb-10">
+          <div className="bg-slate-50 flex w-full min-w-[450px] flex-col items-center bg-white bg-cover bg-clip-border p-[16px] rounded-2xl pb-5">
             <div
               className="relative mt-1 flex h-40 w-full justify-center rounded-xl bg-cover"
               style={{
@@ -125,12 +123,13 @@ export const DashBoard: FC = () => {
               </div>
             </div>
             {user.name ? (
-              <div className=" flex flex-col items-center pt-5">
+              <div className=" flex flex-col items-center mt-20 mb-1 pt-2">
                 <h4 className="text-2xl font-bold">{user?.name}</h4>
-                <p className="text-gray-700 text-lg font-normal mt-3">
+                <p className="text-gray-800 text-lg font-normal mt-3">
                   {user?.designation}
                 </p>
-                <p className="text-gray-600 text-lg font-normal">{`${user.address?.localityLine} ${user.address?.city} ${user.address?.state}`}</p>
+                <p className="text-gray-500 text-lg font-normal">{`${user.address?.localityLine}, ${user.address?.city}, ${user.address?.state}`}</p>
+                <p className="text-gray-500 text-lg font-normal">{`${user.address?.pinCode}`}</p>
                 <div className="flex flex-row mt-4 justify-between">
                   <Button
                     shape="default"

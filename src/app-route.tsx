@@ -3,7 +3,7 @@ import React from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { suspend } from 'suspend-react';
 import { TopBar } from './components/top-bar';
-import { DashBoard } from './pages/account';
+import { DashBoard } from './pages/dashboard';
 import { useStores } from './utils/use-stores';
 import { SignUp } from './pages/auth/sign-up';
 import { SignIn } from './pages/auth/sign-in';
@@ -48,8 +48,8 @@ const AppRoute: React.FC = observer(() => {
     <>
       <TopBar />
       <Routes>
-        <Route path='business' element={<DashBoard />} />
-        <Route path='*' element={<Navigate to='business' replace />} />
+        <Route path='dashboard' element={<DashBoard />} />
+        <Route path='*' element={<Navigate to='dashboard' replace />} />
       </Routes>
     </>
 
