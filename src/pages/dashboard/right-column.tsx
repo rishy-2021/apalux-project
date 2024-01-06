@@ -17,7 +17,7 @@ interface Props {
   toggleRightColumn: (open: boolean) => void;
 }
 
-export const UserMutaion: FC<Props> = observer(({ rightColumnOpen, toggleRightColumn, user }) => {
+export const RightColumn: FC<Props> = observer(({ rightColumnOpen, toggleRightColumn, user }) => {
 
   const handleOnSuccess = () => {
     toggleRightColumn(false);

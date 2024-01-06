@@ -1,13 +1,13 @@
 import React from "react";
-import { Avatar, Button, Card, Empty } from "antd";
+import { Button, Empty } from "antd";
 import { FC, useEffect, useState } from "react";
-import { DeleteOutlined } from "@ant-design/icons";
-import userImage from "../../assets/images/user.png";
-import { UserMutaion } from "./user-mutation";
-import { useMutation, useQuery } from "../../utils/api-hook";
+import { RightColumn } from "./right-column";
+import { useQuery } from "../../utils/api-hook";
 import { DashUser, userApi } from "../../services/api/user-api";
 import { User } from "../../models/user/user";
 import { useStores } from "../../utils/use-stores";
+import { DashUserCard } from "./dash-user-card";
+import { AdminUserCard } from "./admin-user-card";
 
 export const DashBoard: FC = () => {
   const {
@@ -26,20 +26,6 @@ export const DashBoard: FC = () => {
     },
   });
 
-  const { mutate: getDashUserDelete } = useMutation(userApi.deleteDashUser, {
-    onSuccess: ({ data }) => {
-      getDashUsersQuery()
-    },
-  });
-
-  const deleteUser = (id: string) => {
-    getDashUserDelete({
-      pathParams:{
-        id: id
-      }
-    })
-  }
-
   useEffect(() => {
     getDashUsersQuery();
   }, [rightColumn]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -51,7 +37,7 @@ export const DashBoard: FC = () => {
           rightColumn.open && "pr-[380px]"
         } transition-all pt-20 px-20 mt-10`}
       >
-        <div className="flex-1 flex flex-col mr-5 bg-red-100 h-fit	bg-white rounded-xl px-3 py-5">
+        <div className="flex-1 flex flex-col mr-5 h-fit	bg-white rounded-xl px-3 py-5">
           <div className="flex flex-row items-start justify-between px-5 mb-5">
             <p className="text-2xl font-bold">Users</p>
             <Button
@@ -67,37 +53,16 @@ export const DashBoard: FC = () => {
             </Button>
           </div>
           {users.length ? (
-            <div className="flex flex-wrap ">
-              {users.map(({_id, name, designation }, idx) => (
-                <Card
+            <div className="flex flex-wrap">
+              {users.map((user, idx) => (
+                <DashUserCard
                   key={idx}
-                  style={{ width: 285, margin: users.length >3 ? "0px auto" : "10px", marginBottom: 10}}
-                  cover={
-                    <img
-                      alt="example"
-                      src={
-                        "https://images.pexels.com/photos/5967931/pexels-photo-5967931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                      }
-                    />
-                  }
-                  actions={[<DeleteOutlined key="setting" onClick={()=>deleteUser(_id)}/>]}
-                >
-                  <div className="flex flex-row -m-3">
-                    <Avatar
-                      src={userImage}
-                      className="border border-gray-300	"
-                      size={45}
-                    />
-                    <div className="flex flex-col flex-1 ml-1.5">
-                      <p className="text-gray-700 text-lg font-normal">
-                        {name}
-                      </p>
-                      <p className="text-gray-600 text-md font-normal -mt-1">
-                        {designation}
-                      </p>
-                    </div>
-                  </div>
-                </Card>
+                  user={user}
+                  onSuccess={() => {
+                    getDashUsersQuery();
+                  }}
+                  length={users?.length}
+                />
               ))}
             </div>
           ) : (
@@ -123,37 +88,12 @@ export const DashBoard: FC = () => {
               </div>
             </div>
             {user.name ? (
-              <div className=" flex flex-col items-center mt-20 mb-1 pt-2">
-                <h4 className="text-2xl font-bold">{user?.name}</h4>
-                <p className="text-gray-800 text-lg font-normal mt-3">
-                  {user?.designation}
-                </p>
-                <p className="text-gray-500 text-lg font-normal">{`${user.address?.localityLine}, ${user.address?.city}, ${user.address?.state}`}</p>
-                <p className="text-gray-500 text-lg font-normal">{`${user.address?.pinCode}`}</p>
-                <div className="flex flex-row mt-4 justify-between">
-                  <Button
-                    shape="default"
-                    size="middle"
-                    type="primary"
-                    className="mr-3"
-                    onClick={() => {
-                      setRightColumn({ open: true, user: user });
-                    }}
-                  >
-                    <span className="font-bold">Edit</span>
-                    <i className="icon-EditMinor ml-2" />
-                  </Button>
-                  <Button
-                    shape="default"
-                    size="middle"
-                    type="primary"
-                    onClick={() => {}}
-                  >
-                    <span className="font-bold">Mail</span>
-                    <i className="icon-ArrowRightMinor ml-2" />
-                  </Button>
-                </div>
-              </div>
+              <AdminUserCard
+                user={user}
+                OnClick={(open, user) =>
+                  setRightColumn({ open: open, user: user })
+                }
+              />
             ) : (
               <Empty
                 image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
@@ -173,7 +113,7 @@ export const DashBoard: FC = () => {
             )}
           </div>
         </div>
-        <UserMutaion
+        <RightColumn
           user={rightColumn?.user}
           rightColumnOpen={rightColumn.open}
           toggleRightColumn={(open) => setRightColumn({ open })}
