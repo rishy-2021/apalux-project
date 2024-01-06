@@ -72,46 +72,12 @@ export const DashBoard: FC = () => {
           )}
         </div>
         <div className={`${rightColumn.open && "mr-5"}`}>
-          <div className="bg-slate-50 flex w-full min-w-[450px] flex-col items-center bg-white bg-cover bg-clip-border p-[16px] rounded-2xl pb-5">
-            <div
-              className="relative mt-1 flex h-40 w-full justify-center rounded-xl bg-cover"
-              style={{
-                backgroundImage: `url('https://i.ibb.co/FWggPq1/banner.png')`,
-              }}
-            >
-              <div className="absolute -bottom-20 flex h-[150px] w-[150px] items-center justify-center rounded-full border-[4px] border-white bg-pink-400">
-                <img
-                  className="h-full w-full rounded-full"
-                  src="https://i.ibb.co/6YbS9ff/avatar11.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            {user.name ? (
-              <AdminUserCard
+        <AdminUserCard
                 user={user}
-                OnClick={(open, user) =>
+                onClick={(open, user) =>
                   setRightColumn({ open: open, user: user })
                 }
               />
-            ) : (
-              <Empty
-                image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
-                imageStyle={{ height: 60 }}
-                description={<span>No details found</span>}
-                className="flex items-center flex-col mt-24"
-              >
-                <Button
-                  onClick={() => {
-                    setRightColumn({ open: true, user: user });
-                  }}
-                  type="primary"
-                >
-                  Add Now
-                </Button>
-              </Empty>
-            )}
-          </div>
         </div>
         <RightColumn
           user={rightColumn?.user}

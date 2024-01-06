@@ -39,7 +39,7 @@ export type AddUserRequestBody = {
     }: {
       requestBody: AddUserRequestBody
     }): Promise<ApiResponse<AddUserResponse>> {
-      return apiGateway.post(`/auth/adddashuser`, requestBody);
+      return apiGateway.post(`/adddashuser`, requestBody);
     },
 
     async updateAdminUser({
@@ -50,7 +50,7 @@ export type AddUserRequestBody = {
       requestBody: User
     }): Promise<ApiResponse<AddUserResponse>> {
       const {id} = pathParams
-      return apiGateway.patch(`/auth/updateadminuser/${id}`, requestBody);
+      return apiGateway.patch(`/updateadminuser/${id}`, requestBody);
     },
 
     async deleteDashUser({
@@ -59,10 +59,10 @@ export type AddUserRequestBody = {
       pathParams:AddUserPathParams,
     }): Promise<ApiResponse<AddUserResponse>> {
       const {id} = pathParams
-      return apiGateway.delete(`/auth/deleteuser/${id}`);
+      return apiGateway.delete(`/deleteuser/${id}`);
     },
 
     async getDashUsers(): Promise<ApiResponse<DashUser[]>> {
-      return apiGateway.get(`/auth/getdashboardusers`);
+      return apiGateway.get(`/getdashboardusers`);
     }
   };
