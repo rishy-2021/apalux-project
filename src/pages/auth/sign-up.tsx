@@ -8,6 +8,7 @@ import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { signUpInput } from './auth.const';
+import { NoticeType } from 'antd/es/message/interface';
 
 export const SignUp: FC = observer(function SignUp() {
 
@@ -33,19 +34,21 @@ export const SignUp: FC = observer(function SignUp() {
     Record<string, never>,
     SignUpRequestBody
   >(authenticationApi.signUp, {
-    onSuccess: ({ data }) => {
-      success()
+    onSuccess: ({ data: {message} }) => {
+      displayMessage(message, "success" )
       reset()
     },
     onError(err) {
-      console.error(err)
+      if(err.kind === 'rejected'){
+        displayMessage('This email has already taken', 'error')
+      }
     },
   });
 
-  const success = () => {
+  const displayMessage = (message: string, type: NoticeType) => {
     messageApi.open({
-      type: 'success',
-      content: 'Verification link is sent to your email account!! ',
+      type: type,
+      content: message,
     });
   };
 

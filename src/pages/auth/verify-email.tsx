@@ -3,16 +3,16 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '../../utils/api-hook';
 import { authenticationApi } from '../../services/api';
-import { useStores } from '../../utils/use-stores';
+// import { useStores } from '../../utils/use-stores';
 
 export default function VerifyEmail() {
 
-  const { userStore: { setAuthentication } } = useStores();
+  // const { userStore: { setAuthentication } } = useStores();
   let { id , accessToken } = useParams();
 
   const { query: emailVerificationQuery } = useQuery(authenticationApi.verifyEmail, {
     onSuccess: ({ data}) => {
-     setAuthentication(data.accessToken, data.user)
+    //  setAuthentication(data.accessToken, data.user)
     },
   });
 

@@ -4,7 +4,7 @@ import { useMutation } from "../../utils/api-hook";
 import { SignInRequestBody, authenticationApi } from "../../services/api";
 import { DateTime as d } from 'luxon';
 import { days, dayTimes, months, signInInput,  } from './auth.const';
-import { Button, Input } from 'antd';
+import { Button, Input, message } from 'antd';
 import { Controller, useForm } from "react-hook-form";
 import { observer } from "mobx-react-lite";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -12,6 +12,7 @@ import { z } from "zod";
 
 export const SignIn: FC = observer(function SignIn() {
   const { userStore: { setAuthentication } } = useStores();
+  const [messageApi, contextHolder] = message.useMessage();
 
   const validationSchema = z
     .object({
@@ -28,7 +29,17 @@ export const SignIn: FC = observer(function SignIn() {
     onSuccess: ({ data: { accessToken, user } }) => {
       setAuthentication(accessToken, user);
     },
+    onError(err) {
+        error()
+    },
   });
+
+  const error = () => {
+    messageApi.open({
+      type: 'error',
+      content: 'Wrong email & password',
+    });
+  };
 
   const onSave = (values: SignInRequestBody) => {
     signInMutation({
@@ -41,6 +52,7 @@ export const SignIn: FC = observer(function SignIn() {
 
   return (
     <div className="flex flex-row flex-wrap h-screen">
+          {contextHolder}
       <div
         className={`flex w-full lg:w-[45%] items-center`}
         style={{ backgroundColor: currentDayTime.backgroundColor }}

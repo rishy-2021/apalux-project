@@ -2,14 +2,9 @@ import { ApiResponse } from 'apisauce';
 import { User } from '../../models/user/user';
 import { apiGateway } from './api-config';
 
-export type SendOtpResponse = { success: boolean, data?: { otp: string } }
+export type SignInRequestBody = {email: string; password: string }
 
-export type SendOtpRequestBody = { mobile: string }
-
-export type SignInRequestBody = {email: string; password: string
-}
-
-export type SignInResponse = { accessToken: string; user: User }
+export type SignInResponse = { message?:string, accessToken: string; user: User }
 
 export type SignUpResponse = {sucess: boolean, message : string}
 
